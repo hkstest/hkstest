@@ -1,55 +1,74 @@
-<!DOCTYPE HTML>
-<!-- This is how HTML comments look like -->
 <html>
-<!-- the title will appear on the page-->
 <head>
-<title>Employee Interests Survey</title>
+<title></title>
+<!-- Apply styles to html elements -->
+<style>
+*{
+margin:0; padding:0; boxsizing:border-box;
+}
+header{
+width: 100%; height: 100vh;
+background-color: white;
+background-repeat: no-repeat;
+background-size: cover;
+}
+nav{
+width: 100%; height: 15vh;
+background: black;
+display: flex; justify-content: space-between;
+align-items: center;
+}
+nav .mainmenu{
+width: 40%;
+display: flex; justify-content: space-around;
+}
+main{
+width: 100%; height: 85vh;
+display: flex; justify-content: center;
+align-items: center;
+text-align: center;
+}
+section h3{
+letter-spacing: 3px; font-weight: 200;
+}
+section h1{
+text-transform: uppercase;
+}
+section div{
+animation:changeborder 10s infinite linear;
+border: 7px solid red;
+}
+@keyframes changeborder{
+0%
+20%
+40%
+}
+</style>
 </head>
 <body>
-<!-- as it is a survey form, we will need to submit the details, hence we use form -->
-<!-- We can give absolute url, or relative url like /nextpage.jsp, and specify POST or GET method -->
-<form action="http://google.co.in">
-<!-- If we remove this, every thing will move to the left of the page-->
-<div align="center">
-<!--Adds a heading to the form-->
-<h1>Employee Interests Survey form</h1>
-Enter your name:
-<!-- Input type text for small texts, specify size -->
-<input type="text" name="UserName" size=35 maxlength=35 value="">
-<!--Adds spaces - remove and see what happens -->
-</br></br>
-Enter your department:
-<input type="text" name="Deptt" size=35 maxlength=35 value=""> </br> </br>
-Tell us a little about yourself:
-<!-- For writing lot of text like descriptions with text wrapping,
-if you dont want text wrapping, you can add wrap = "off" (horizontal scrollbar -->
-<textarea name="Comments" cols=30 rows=4></textarea> </br> </br>
-Do you exercise at home?
-<!-- Radio buttons help you choose one out of the many values -->
-<input type="radio" name="exe" value=1>Yes
-<input type="radio" name="exe" value=2>No
-</p>
-How do you like to read about your favorite topics?
-<p>
-<!--Checkbox lets you select multiple options -->
-<input type="checkbox" name="Books">Books
-<input type="checkbox" name="Web">Online resources
-<input type="checkbox" name="Phone">Phone apps
-<input type="checkbox" name="Magazines">Magazines
-</p>
-What genre of movies do you like?
-<!--Select box lets you choose one of the multiple dropdown options-->
-<select name="moviepref" ><option>
-<option value=1 selected = "true">comedy
-<option value=2 >romance
-<option value=3 >thriller
-<option value=4 >horror
-<option value=5 >biopic
-</select>
-</br></br>
-<!--submits the information entered in the form by the user -->
-<input type=submit value="Submit form">
+<!--Let us create a simple menu using the navigation tags-->
+<!--Use header to indicate that manu will be a part of header -->
+<header>
+<nav>
+<div class = "logo" <h3 style="color:white;">MYLOGO</h3></div>
+<!--Lets define the menu items now-->
+<div class = "mainmenu">
+<a href="https://hackr.io/tutorials/learn-html-5">Home</a>
+<a href="https://hackr.io/tutorials/learn-html-5">About Us</a>
+<a href="https://hackr.io/tutorials/learn-html-5">Contact Us</a>
 </div>
-</form>
+</nav>
+<!--Let us create the main section now, if you are not using html5, use div tags-->
+<main>
+<section>
+<!--Check out the styling elements for this div class - change_text -->
+<div class = "change_text"><b>WELCOME TO XXX ELECTRONICS</b></div>
+<!--make text italic-->
+<p><i>All your electronics needs in one place</i></p><br>
+<!--create a button, if there is a form, you can specify an action on click-->
+<input type = button value = "view more">
+</section>
+</main>
+</header>
 </body>
 </html>
